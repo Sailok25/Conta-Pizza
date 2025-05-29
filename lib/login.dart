@@ -7,7 +7,7 @@ class Login extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/fondo.png'), // Asegúrate de tener esta imagen en tu carpeta assets
+            image: AssetImage('assets/fondo.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -21,7 +21,7 @@ class Login extends StatelessWidget {
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: Colors.red,
-                  fontFamily: 'OrderPizza-97J2', // Usa la fuente personalizada
+                  fontFamily: 'OrderPizza-97J2',
                 ),
               ),
               SizedBox(height: 50),
@@ -33,14 +33,14 @@ class Login extends StatelessWidget {
                     fillColor: Colors.white,
                     labelText: 'Correo Electrónico',
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30.0), // Ajusta el radio del borde para hacerlo más redondeado
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30.0), // Asegúrate de que el borde también sea redondeado cuando el TextField no está enfocado
+                      borderRadius: BorderRadius.circular(30.0),
                       borderSide: BorderSide(color: Colors.grey),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30.0), // Asegúrate de que el borde también sea redondeado cuando el TextField está enfocado
+                      borderRadius: BorderRadius.circular(30.0),
                       borderSide: BorderSide(color: Colors.blue),
                     ),
                   ),
@@ -56,14 +56,14 @@ class Login extends StatelessWidget {
                     fillColor: Colors.white,
                     labelText: 'Contraseña',
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30.0), // Ajusta el radio del borde para hacerlo más redondeado
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30.0), // Asegúrate de que el borde también sea redondeado cuando el TextField no está enfocado
+                      borderRadius: BorderRadius.circular(30.0),
                       borderSide: BorderSide(color: Colors.grey),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30.0), // Asegúrate de que el borde también sea redondeado cuando el TextField está enfocado
+                      borderRadius: BorderRadius.circular(30.0),
                       borderSide: BorderSide(color: Colors.blue),
                     ),
                   ),
@@ -86,6 +86,20 @@ class Login extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.white,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/registro');
+                },
+                child: Text(
+                  '¿No tienes una cuenta? Regístrate',
+                  style: TextStyle(
+                    color: const Color.fromARGB(255, 0, 0, 0),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
