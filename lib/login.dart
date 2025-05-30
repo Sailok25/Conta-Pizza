@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
+  // Controladores para los campos de texto
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +32,7 @@ class Login extends StatelessWidget {
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 40),
                 child: TextField(
+                  controller: emailController,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
@@ -50,6 +55,7 @@ class Login extends StatelessWidget {
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 40),
                 child: TextField(
+                  controller: passwordController,
                   obscureText: true,
                   decoration: InputDecoration(
                     filled: true,
@@ -72,7 +78,10 @@ class Login extends StatelessWidget {
               SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                  // Acción para iniciar sesión
+                  // Aquí puedes agregar la lógica para autenticar al usuario
+                  // Por ahora, simplemente navega a la pantalla principal
+                  Navigator.pushReplacementNamed(
+                      context, '/pantalla_principal');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red,
@@ -97,7 +106,7 @@ class Login extends StatelessWidget {
                 child: Text(
                   '¿No tienes una cuenta? Regístrate',
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 0, 0, 0),
+                    color: Colors.black,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
